@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<title>2026-4</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css'>
+<style>
+#counter{
+  font-size:75px;
+}
+
+div {
+  background:lightblue;
+  border-style: solid;
+}
+
+span {
+  background:red;
+}
+
+.stats{
+  font-size:150%;
+  background:tan;
+}
+</style>
+</head>
+<body translate="no">
+<div class="container">
+<div class="row">
+<div class="stats" id="counter">100</div>
+<div>Score: <span class="stats">100</span></div>
+</div>
+<div class="row">
+<div class="col">
+column 1
+</div>
+<div class="col">
+column 2
+</div>
+</div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script id="rendered-js">
+console.clear();
+
+function countdown(evt) {
+  let counter = $("#counter").text();
+  counter = counter - 1;
+  $("#counter").text(counter);
+}
+setInterval(countdown,1000);
+    </script>
+</body>
+</html>
